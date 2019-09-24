@@ -1,0 +1,38 @@
+version: '3.4'
+
+services:
+  db:
+    container_name: shoppingmall_mysql
+    image: mysql:5.7
+    command: --lower_case_table_names=1
+    environment:
+      TZ: "Asfsia/Seoul"
+      MYSQL_ROOT_PASSWORD: "pass"
+      MYSQL_USER: "chloe"
+      MYSQL_PASSWORD: "pass"
+      MYSQL_DATABASE: "shoppingmall"
+    ports:
+    - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "-uroot", "-ppass",  "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  api:
+    container_name: wedding_api
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: shopping/api
+    ports:
+    - 8080:8080
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/healthy"]
+      interval: 30s
+      timeout: 60s
+      retries: 15
+    links:
+      - db:db
+    depends_on:
+      - db
