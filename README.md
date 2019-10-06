@@ -1,6 +1,6 @@
 # Small shopping mall
+> Spring boot & JPA 활용 infrean 강의 실습을 하며, JPA study 합니다.
 
-OOP, Test code, Clean code
 
 #### Spec 
 - REST API
@@ -9,6 +9,7 @@ OOP, Test code, Clean code
 - Gradle 
 - Lombok
 - H2  
+- Thymeleaf
 
 #### DB modeling
 - 회원:주문 = 1:N
