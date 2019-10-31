@@ -1,5 +1,6 @@
-package com.toy.shoppingmall.domain;
+package com.toy.shoppingmall.members;
 
+import com.toy.shoppingmall.orders.Order;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,12 +11,14 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-class Member {
+public class Member {
 
     @Id
     @GeneratedValue
     @Column(name = "member_id")
     private Long id;
+
+    private String name;
 
     private String email;
 
@@ -24,6 +27,4 @@ class Member {
 
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
-
-
 }

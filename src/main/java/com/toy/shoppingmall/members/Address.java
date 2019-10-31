@@ -1,4 +1,4 @@
-package com.toy.shoppingmall.domain;
+package com.toy.shoppingmall.members;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-class Address {
+public class Address {
 
     private String city;
     private String street;
