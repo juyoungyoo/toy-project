@@ -56,11 +56,11 @@ public class OrderRepository {
                                                          .setMaxResults(1_000);
 
         if (orderSearch.getOrderStatus() != null) {
-            orderTypedQuery.setParameter("status", orderSearch.getOrderStatus())
+            orderTypedQuery.setParameter("status", orderSearch.getOrderStatus());
         }
 
         if (StringUtils.hasText(orderSearch.getMemberName())) {
-            orderTypedQuery.setParameter("name", orderSearch.getMemberName())
+            orderTypedQuery.setParameter("name", orderSearch.getMemberName());
         }
 //                            .setFirstResult(100)        // 100부터
 
