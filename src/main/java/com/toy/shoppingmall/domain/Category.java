@@ -1,6 +1,6 @@
 package com.toy.shoppingmall.domain;
 
-import com.toy.shoppingmall.domain.item.Item;
+import com.toy.shoppingmall.items.domain.Item;
 import lombok.Getter;
 import lombok.Setter;
 

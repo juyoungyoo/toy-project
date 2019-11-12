@@ -1,4 +1,4 @@
-package com.toy.shoppingmall.domain;
+package com.toy.shoppingmall.orders;
 
 enum DeliveryStatus {
 

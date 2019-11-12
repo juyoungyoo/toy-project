@@ -1,5 +1,6 @@
-package com.toy.shoppingmall.domain;
+package com.toy.shoppingmall.orders;
 
+import com.toy.shoppingmall.members.Address;
 import lombok.Getter;
 import lombok.Setter;
 
