@@ -69,7 +69,7 @@ class OrderServiceTest {
 
     @DisplayName("주문 취소")
     @Test
-    void cancle() {
+    void cancel() {
         // given
         Member member = createMember();
         Book item = createBook("시골JPA", 10_000, 10);
