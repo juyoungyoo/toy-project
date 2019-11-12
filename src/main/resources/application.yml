@@ -5,6 +5,17 @@ spring:
 ---
 spring:
   profiles: local
+  jpa:
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        ddl-auto: create-drop
+
+---
+spring:
+  profiles: dev
   jackson:
     deserialization:
       fail-on-unknown-properties: true
@@ -22,3 +33,5 @@ spring:
         #        show_sql: true
         format_sql: true
     open-in-view: true
+
+
