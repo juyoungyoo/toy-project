@@ -2,10 +2,10 @@ package com.toy.shoppingmall.items.domain;
 
 import com.toy.shoppingmall.domain.Category;
 import com.toy.shoppingmall.items.NotEnoughStockException;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,6 +14,8 @@ import java.util.List;
 @Getter
 @Inheritance
 @DiscriminatorColumn(name = "dtype")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public abstract class Item {
 
     @Id
